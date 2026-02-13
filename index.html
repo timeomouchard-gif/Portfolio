@@ -3,21 +3,51 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="CV de Timéo MOUCHARD - Étudiant en BTS CIEL" />
+        <meta name="description" content="Portfolio de Timéo MOUCHARD - Technicien supérieur en devenir (BTS CIEL)" />
         <meta name="author" content="Timéo MOUCHARD" />
         <title>CV - Timéo MOUCHARD</title>
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Mpnuli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <link href="css/styles.css" rel="stylesheet" />
+        
+        <style>
+            .toast-custom {
+                visibility: hidden;
+                min-width: 250px;
+                background-color: rgba(33, 37, 41, 0.95); /* Fond sombre presque opaque */
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 16px;
+                position: fixed;
+                z-index: 9999;
+                left: 50%;
+                bottom: 30px;
+                transform: translateX(-50%);
+                font-family: 'Saira Extra Condensed', sans-serif;
+                font-size: 1.1rem;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+                opacity: 0;
+                transition: opacity 0.5s, bottom 0.5s;
+            }
+
+            .toast-custom.show {
+                visibility: visible;
+                opacity: 1;
+                bottom: 50px; /* Petit effet de remontée */
+            }
+        </style>
     </head>
     <body id="page-top">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">MOUCHARD Timéo</span>
-                <span class="d-none d-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2 src="assets/img/Pdp_MouchardTimeo.png" alt="Photo de Timéo Mouchard" /></span>
-            </a> 
+                <span class="d-block d-lg-none">Timéo MOUCHARD</span>
+                <span class="d-none d-block">
+                    <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/Pdp_MouchardTimeo.png" alt="Photo de Timéo Mouchard" />
+                </span>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
@@ -26,10 +56,11 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Formation</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Compétences</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#qualite">Qualités</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Intérêt</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Projets</a></li>
                 </ul>
             </div>
         </nav>
+        
         <div class="container-fluid p-0">
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
@@ -37,12 +68,16 @@
                         MOUCHARD
                         <span class="text-primary">Timéo</span>
                     </h1>
-                  <div class="subheading mb-5">
+                    <div class="subheading mb-5">
                         3 Rue Arthur Rimbaud, 14460 Colombelles · 06 18 40 36 73 ·
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=timeomouchard@gmail.com" target="_blank" onclick="navigator.clipboard.writeText('timeomouchard@gmail.com'); alert('Email copié !');">timeomouchard@gmail.com</a>
+                        <a href="mailto:timeomouchard@gmail.com" class="email-link" onclick="copyEmail(event, 'timeomouchard@gmail.com')">timeomouchard@gmail.com</a>
                     </div>
-<div id="toast-email" class="toast-custom">Email copié dans le presse-papier !</div>
-                    <p class="lead mb-5">Étudiant en BTS CIEL (Cybersécurité, Informatique et Électronique), passionné par les technologies et les systèmes connectés. Motivé, curieux et rigoureux, je recherche un stage en informatique ou un emploi étudiant afin de mettre en pratique mes compétences en programmation et maintenance.</p>
+                    
+                    <p class="lead mb-5">
+                        Futur technicien en <strong>Cybersécurité, Informatique et Électronique (BTS CIEL)</strong>, je me situe à l'intersection du développement logiciel et de l'ingénierie système. Mon parcours, du Bac Pro MELEC au développement .NET, m'a permis de forger une vision globale : du câblage physique jusqu'à la couche applicative. 
+                        <br><br>
+                        Je ne me contente pas de coder ; j'aime comprendre comment les données circulent et sécuriser ces échanges. Je recherche aujourd'hui une <strong>alternance d'un an</strong> pour mettre ma polyvalence technique et ma rigueur au service de projets concrets.
+                    </p>
                     <div class="social-icons">
                         <a class="social-icon" href="#!"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://github.com/timeomouchard-gif" target="_blank"><i class="fab fa-github"></i></a>
@@ -50,41 +85,45 @@
                 </div>
             </section>
             <hr class="m-0" />
+            
             <section class="resume-section" id="experience">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Expérience</h2>
+                    <h2 class="mb-5">Expérience Professionnelle</h2>
+                    
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Stagiaire en informatique/radio</h3>
+                            <h3 class="mb-0">Développeur Mobile & Support Technique (Stage)</h3>
                             <div class="subheading mb-3">Radio 666, Hérouville-Saint-Clair</div>
                             <ul>
-                                <li>Création d'une application mobile sur Android (.apk) sur Visual Studio en .Net Framework MAUI.</li>
-                                <li>Gestion de la playlist en direct.</li>
-                                <li>Gestion de la discothèque (inventaire) de la radio.</li>
+                                <li><strong>Développement Mobile :</strong> Conception intégrale d'une application Android (.apk) sous <strong>Visual Studio (.NET MAUI)</strong> pour moderniser l'accès aux services de la radio.</li>
+                                <li><strong>Optimisation de flux :</strong> Gestion technique et automatisation de la playlist en direct pour assurer une continuité d'antenne sans faille.</li>
+                                <li><strong>Base de données :</strong> Numérisation et structuration de l'inventaire physique de la discothèque pour faciliter le travail des animateurs.</li>
                             </ul>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">Mai 2025 - Juin 2025</span></div>
                     </div>
+                    
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Stagiaire en maintenance</h3>
-                            <div class="subheading mb-3">Cité Marine, Kervignac</div>
+                            <h3 class="mb-0">Technicien de Maintenance Industrielle & GMAO</h3>
+                            <div class="subheading mb-3">Cité Marine, Kervignac (Stage & Intérim)</div>
                             <ul>
-                                <li>Participation à la maintenance électrique des installations industrielles.</li>
-                                <li>Création d'une arborescence et d'un système GMAO.</li>
-                                <li>Gestion de l'inventaire et maintenance en milieu agroalimentaire.</li>
+                                <li><strong>Ingénierie de maintenance :</strong> Création d'une arborescence technique détaillée pour le déploiement d'un nouveau système de <strong>GMAO</strong> (Gestion de Maintenance Assistée par Ordinateur).</li>
+                                <li><strong>Intervention technique :</strong> Maintenance curative et préventive sur des lignes de production automatisées (électrique et mécanique).</li>
+                                <li><strong>Environnement exigeant :</strong> Travail en horaires décalés (nuit) et respect strict des normes d'hygiène agroalimentaire.</li>
                             </ul>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Novembre 2023 - Janvier 2024</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">Nov. 2023 - Janv. 2026</span></div>
                     </div>
+                    
                     <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Stagiaire en électricité</h3>
+                            <h3 class="mb-0">Électricien Bâtiment & Réseaux (Stage)</h3>
                             <div class="subheading mb-3">SARL ESBRI, Moult-Chicheboville</div>
                             <ul>
-                                <li>Travaux de rénovation et d'installation électrique en pavillons.</li>
-                                <li>Connexion et câblage de réseaux dans le bâtiment.</li>
-                                <li>Découverte du fonctionnement d'une entreprise artisanale.</li>
+                                <li><strong>Infrastructures connectées :</strong> Câblage de réseaux VDI (Voix, Données, Images) et raccordement de baies de brassage.</li>
+                                <li><strong>Rénovation électrique :</strong> Mise en conformité d'installations résidentielles et pose d'appareillages terminaux.</li>
+                                <li><strong>Suivi de chantier :</strong> Lecture de plans architecturaux et coordination avec les autres corps de métier.</li>
                             </ul>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">2021 - 2023</span></div>
@@ -92,6 +131,7 @@
                 </div>
             </section>
             <hr class="m-0" />
+            
             <section class="resume-section" id="education">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Formation</h2>
@@ -100,6 +140,7 @@
                             <h3 class="mb-0">Institut Lemonnier, Caen</h3>
                             <div class="subheading mb-3">BTS CIEL</div>
                             <div>Cybersécurité, Informatique et Électronique</div>
+                            <p>Spécialisation en architecture réseau et développement de solutions sécurisées.</p>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">2024 - En cours</span></div>
                     </div>
@@ -108,67 +149,96 @@
                             <h3 class="mb-0">Institut Lemonnier, Caen</h3>
                             <div class="subheading mb-3">Bac Pro MELEC</div>
                             <div>Métiers de l'Électricité et de ses Environnements Connectés</div>
-                            <p>Mention: Bien</p>
+                            <p>Mention : <strong>Bien</strong></p>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">2021 - 2024</span></div>
                     </div>
                 </div>
             </section>
             <hr class="m-0" />
+            
             <section class="resume-section" id="skills">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Compétences</h2>
-                    <div class="subheading mb-3">Langages de programmation & Outils</div>
+                    <h2 class="mb-5">Compétences Techniques</h2>
+                    <div class="subheading mb-3">Développement & Outils</div>
                     <ul class="fa-ul mb-0">
-                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Programmation : Python, JS, HTML, PHP C, C#, Lua</li>
-                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Électricité bâtiment & industrielle</li>
-                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Gestion de maintenance (GMAO)</li>
-                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Notions de réseau et de connectivité</li>
-                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Bureautique (Word, Excel, PowerPoint)</li>
-                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Utilisation de logiciel : Github, SQL Server Management, PuTTY, Android Studio, WireShark, Visual Studio Code,Visual Studio (.NET FRAMEWORK) </li>
+                        <li><span class="fa-li"><i class="fas fa-laptop-code text-primary"></i></span><strong>Langages :</strong> C, C#, Python, JavaScript, HTML5/CSS3, Lua.</li>
+                        <li><span class="fa-li"><i class="fas fa-mobile-alt text-primary"></i></span><strong>Frameworks :</strong> .NET MAUI (Mobile), Visual Studio, Android Studio.</li>
+                        <li><span class="fa-li"><i class="fas fa-database text-primary"></i></span><strong>Données :</strong> SQL Server Management, Gestion de BDD relationnelles.</li>
                     </ul>
                     <br>
+                    <div class="subheading mb-3">Réseaux & Systèmes</div>
+                    <ul class="fa-ul mb-0">
+                        <li><span class="fa-li"><i class="fas fa-network-wired text-primary"></i></span><strong>Analyse :</strong> Wireshark (Capture de trames), PuTTY (SSH/Telnet).</li>
+                        <li><span class="fa-li"><i class="fas fa-server text-primary"></i></span><strong>Maintenance :</strong> GMAO, Diagnostic de pannes industrielles et réseaux.</li>
+                    </ul>
+                     <br>
                     <div class="subheading mb-3">Langues</div>
                     <ul class="fa-ul mb-0">
-                        <li><span class="fa-li"><i class="fas fa-language"></i></span>Français : Langue maternelle</li>
-                        <li><span class="fa-li"><i class="fas fa-language"></i></span>Anglais : Niveau B1 (Technique & Courant)</li>
+                        <li><span class="fa-li"><i class="fas fa-flag text-primary"></i></span><strong>Français :</strong> Langue maternelle.</li>
+                        <li><span class="fa-li"><i class="fas fa-globe text-primary"></i></span><strong>Anglais :</strong> Niveau B1 (Anglais technique opérationnel pour la documentation).</li>
                     </ul>
                 </div>
             </section>
             <hr class="m-0" />
+            
             <section class="resume-section" id="qualite">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Qualités Personnel</h2>
-                    <p>Je me distingue par mon approche rigoureuse et ma curiosité naturelle pour les nouvelles technologies.</p>
-
+                    <h2 class="mb-5">Savoir-Être</h2>
                     <ul class="fa-ul mb-0">
                         <li>
                             <span class="fa-li"><i class="fas fa-check text-primary"></i></span>
-                            Curieux et volontaire : Toujours à la recherche de nouvelles technologies à apprendre.
+                            <strong>Rigueur technique :</strong> Précision indispensable acquise lors des diagnostics de sécurité et de câblage.
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-check text-primary"></i></span>
-                            Attentif et patient : Essentiel pour le débogage et la maintenance système. 
+                            <strong>Curiosité technologique :</strong> Veille active sur les nouveaux langages et protocoles IoT.
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-check text-primary"></i></span>
-                            Esprit d'équipe : Capacité à collaborer efficacement sur des projets communs.
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check text-primary"></i></span>
-                            Rigoureux dans le travail : Précision dans l'exécution des tâches techniques.
+                            <strong>Esprit collaboratif :</strong> Habitude du travail en équipe, renforcée par les missions postées en industrie (3x8).
                         </li>
                     </ul>
                 </div>
             </section>
-        </div>
-        <section class="resume-section" id="interests">
+            <hr class="m-0" />
+            
+            <section class="resume-section" id="interests">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Centres d’intérêt & Projets</h2>
-                    <div class="subheading mb-3">Informatique & Développement</div>
-                    <p>Passionné par la création numérique, je consacre une partie de mon temps libre au développement de projets personnels. Mon projet actuel consiste en la "conception et la programmation d'un jeu vidéo", ce qui me permet d'approfondir mes connaissances en logique de jeu, en gestion d'assets et en résolution de problèmes complexes.</p>
+                    <h2 class="mb-5">Projets Personnels</h2>
+                    <div class="subheading mb-3">Développement de Jeu Vidéo Indépendant</div>
+                    <p>
+                        Passionné par la logique algorithmique, je conçois et programme un jeu vidéo complet sur mon temps libre. Ce projet concret me permet de :
+                    </p>
+                    <ul>
+                        <li>Renforcer ma maîtrise de la <strong>Programmation Orientée Objet (POO)</strong>.</li>
+                        <li>Gérer des systèmes complexes (physique, collisions, gestion de mémoire).</li>
+                        <li>Résoudre des problématiques d'optimisation en temps réel.</li>
+                    </ul>
+                </div>
             </section>
+        </div>
+        
+        <div id="toast-email" class="toast-custom">Adresse email copiée !</div>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <script>
+            function copyEmail(event, email) {
+                // Copie dans le presse-papier
+                navigator.clipboard.writeText(email);
+                
+                // Affiche le toast
+                var toast = document.getElementById("toast-email");
+                toast.classList.add("show");
+                
+                // Cache le toast après 2.5 secondes
+                setTimeout(function(){ 
+                    toast.classList.remove("show"); 
+                }, 2500);
+            }
+        </script>
+        
         <script src="js/scripts.js"></script>
     </body>
 </html>
