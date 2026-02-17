@@ -13,6 +13,7 @@
         <link href="css/styles.css" rel="stylesheet" />
         
         <style>
+            /* Style pour la notification de copie d'email */
             .toast-custom {
                 visibility: hidden;
                 min-width: 250px;
@@ -39,14 +40,16 @@
                 bottom: 50px;
             }
 
+            /* Style pour les images dans le carousel */
             .carousel-item img {
                 border-radius: 5px;
                 box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             }
             .carousel-bg {
                 background-color: #f8f9fa;
-                padding: 10px;
+                padding: 15px;
                 border-radius: 8px;
+                border: 1px solid #e9ecef;
             }
         </style>
     </head>
@@ -83,17 +86,23 @@
                         <a href="mailto:timeomouchard@gmail.com" class="email-link" onclick="copyEmail(event, 'timeomouchard@gmail.com')">timeomouchard@gmail.com</a>
                     </div>
                     
-                    <p class="lead mb-5">
+                    <p class="lead mb-4">
                         Actuellement étudiant en <strong>BTS CIEL (Cybersécurité, Informatique et Électronique)</strong>, je prépare mon diplôme de technicien supérieur. Mon parcours est complet : j'ai commencé par l'électricité (Bac Pro MELEC) avant de me spécialiser dans le développement et les réseaux.
                         <br><br>
                         Je ne reste pas bloqué sur une seule technologie : j'aime comprendre comment tout fonctionne, du câble physique jusqu'au code de l'application. Je cherche une <strong>alternance d'un an</strong> pour apporter ma polyvalence et ma rigueur à votre équipe.
                     </p>
+
+                    <div class="mb-5">
+                        <a href="Timeo_Mouchard_CV.pdf" target="_blank" class="btn btn-primary btn-lg shadow-sm">
+                            <i class="fas fa-download me-2"></i> Télécharger mon CV (PDF)
+                        </a>
+                    </div>
+
                     <div class="social-icons">
-                        <a class="social-icon" href="https://www.linkedin.com/in/tim%C3%A9o-mouchard-7178b63b1/" target="_blank" title="Mon LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="social-icon" href="https://github.com/timeomouchard-gif" target="_blank" title="Mon GitHub"><i class="fab fa-github"></i></a>
-                        <a class="social-icon" href="mailto:timeomouchard@gmail.com" title="Me contacter par mail"><i class="fas fa-envelope"></i></a>
-                        
-                        </div>
+                        <a class="social-icon" href="https://www.linkedin.com/in/tim%C3%A9o-mouchard-7178b63b1/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="https://github.com/timeomouchard-gif" target="_blank"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="mailto:timeomouchard@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
                 </div>
             </section>
             <hr class="m-0" />
