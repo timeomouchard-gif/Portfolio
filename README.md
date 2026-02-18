@@ -1,45 +1,61 @@
-# Portfolio Personnel - Timéo Mouchard
+# Portfolio & CV en Ligne - Timéo Mouchard
 
-Ce dépôt contient le code source de mon CV en ligne et portfolio.
-Le site est accessible ici : [timeomouchard-gif.github.io/Portfolio](https://timeomouchard-gif.github.io/Portfolio/)
+Bienvenue sur le dépôt du code source de mon portfolio personnel.
+Ce projet a pour but de présenter mon parcours, mes compétences et mes réalisations techniques dans une interface web moderne et responsive.
 
-## À propos du projet
+🔗 **Voir le site en ligne :** [timeomouchard-gif.github.io/Portfolio](https://timeomouchard-gif.github.io/Portfolio/)
 
-J'ai développé ce site "from scratch" (sans utiliser de constructeur de site type WordPress ou Wix) pour présenter mon parcours et mes projets techniques.
+---
 
-L'objectif était de mettre en pratique les fondamentaux du développement web :
-* **Structure** : HTML5 sémantique.
-* **Style** : CSS3 et Framework Bootstrap pour le responsive.
-* **Logique** : JavaScript vanilla pour les interactions (système de notification, carrousels d'images).
-* **Déploiement** : Utilisation de Git et GitHub Pages.
+## 📂 À propos de ce projet
 
-## Mon Profil
+Ce n'est pas seulement un CV numérique, c'est un exercice technique. J'ai choisi de développer ce site sans utiliser de constructeurs de pages (type WordPress ou Wix) pour démontrer ma maîtrise des fondamentaux du web et du versioning.
 
-Je suis étudiant en **BTS CIEL** (Cybersécurité, Informatique et Électronique) à l'Institut Lemonnier à Caen.
+### Objectifs techniques réalisés :
+* **Développement Front-End :** Création d'une interface structurée en HTML5 et stylisée en CSS3.
+* **Interactivité JavaScript :** Implémentation de scripts "vanilla" (sans framework lourd) pour gérer :
+    * Le système de notification (Toast) lors de la copie de l'email.
+    * Les carousels d'images pour présenter mes projets (WPF & Mobile).
+    * La navigation responsive.
+* **DevOps & Hébergement :** Utilisation de **Git** pour le versioning et déploiement continu via **GitHub Pages**.
 
-Après un parcours technique en électricité et maintenance industrielle (Bac Pro MELEC), je me suis spécialisé dans le développement logiciel et l'administration système. Cette double compétence me permet de comprendre aussi bien la couche matérielle que la couche applicative.
+### Structure du projet :
+* `index.html` : Structure sémantique de la page.
+* `css/styles.css` : Feuilles de style personnalisées et responsive design.
+* `js/scripts.js` : Logique client (événements, DOM manipulation).
+* `assets/` : Gestion des ressources images et documents (CV PDF, APK).
 
-**Je recherche une alternance de 12 mois en développement informatique (Rentrée 2026).**
+---
 
-## Autres Projets
+## 👤 Qui suis-je ?
 
-En plus de ce site web, voici mes principaux projets en cours ou réalisés :
+Je m'appelle **Timéo Mouchard**, étudiant en **BTS CIEL** (Cybersécurité, Informatique et Électronique) à l'Institut Lemonnier (Caen).
 
-**1. Application Mobile Radio 666**
-* Description : Application Android native pour une radio locale (Direct, Podcasts, News).
-* Technos : C#, .NET MAUI, Visual Studio.
-* État : Fonctionnel (APK disponible).
+Mon parcours est marqué par une forte polyvalence : après avoir acquis de la rigueur technique dans le bâtiment et l'industrie (Bac Pro MELEC, stages en électricité et maintenance), je me suis orienté par passion vers le développement logiciel.
 
-**2. Gestion de Courses (Projet de groupe)**
-* Description : Application de bureau pour gérer des événements sportifs (inscriptions, chronométrage).
-* Technos : WPF, C#, SQL.
-* Rôle : Développement de l'interface et gestion de projet (Trello/Kanban).
+### Ce que je recherche :
+Une **alternance d'un an** en développement informatique (démarrage Septembre 2026) pour appliquer mes compétences en **C# / .NET**, **Python** et **Web**.
 
-**3. Moteur de Jeu Vidéo**
-* Description : Projet personnel pour approfondir la programmation orientée objet et les algorithmes complexes.
-* Technos : C#, Lua.
+### Mes autres projets phares :
+* **Application Radio 666** : App mobile Android native (.NET MAUI) pour l'écoute en direct et les podcasts.
+* **Gestion de Courses** : Application de bureau (WPF) pour l'organisation d'événements sportifs.
+* **Jeu Vidéo** : Développement d'un moteur de jeu personnel en C# et Lua.
 
-## Contact
+---
+
+## 🛠 Installation locale
+
+Si vous souhaitez cloner ce projet pour voir le code en local :
+
+1.  Clonez le dépôt :
+    ```bash
+    git clone [https://github.com/timeomouchard-gif/Portfolio.git](https://github.com/timeomouchard-gif/Portfolio.git)
+    ```
+2.  Ouvrez le fichier `index.html` dans votre navigateur.
+
+---
+
+## 📫 Contact
 
 * **LinkedIn** : [Timéo Mouchard](https://www.linkedin.com/in/tim%C3%A9o-mouchard-7178b63b1/)
 * **Email** : timeomouchard@gmail.com
